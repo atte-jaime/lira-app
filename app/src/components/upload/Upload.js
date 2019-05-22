@@ -10,7 +10,7 @@ class Upload extends Component {
       files: [],
       uploading: false,
       uploadProgress: {},
-      successfullUploaded: false
+      successfullUploaded: false,
     };
 
     this.onFilesAdded = this.onFilesAdded.bind(this);
@@ -72,7 +72,7 @@ class Upload extends Component {
 
       const formData = new FormData();
       formData.append("file", file, file.name);
-
+      console.log(file.name);
       req.open("POST", "http://localhost:8000/upload");
       req.send(formData);
     });
@@ -120,6 +120,7 @@ class Upload extends Component {
       );
     }
   }
+
 
   render() {
     return (
