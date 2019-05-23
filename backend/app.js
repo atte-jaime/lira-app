@@ -26,17 +26,22 @@ app.use('/public', express.static(__dirname + '/public'));
 
 app.post('/upload', (req, res, next) => {
   console.log(req);
-  let imageFile = req.files.file;
-
-  imageFile.mv(`${__dirname}/public/audios/${req.body.filename}.mp3`, function(err) {
+  let audioFile = req.files.file;
+  
+  // Si el archivo falla, colocar .mp3 al final del nombre
+  audioFile.mv(`${__dirname}/public/audios/${audioFile.name}`, function(err) {
     if (err) {
       return res.status(500).send(err);
     }
-
-    res.json({file: `public/audios/${req.body.filename}.mp3`});
+  // Igual aquí  
+    res.json({file: `public/audios/${audioFile.name}`});
   });
 
-})
+});
+
+app.post('/analize', (req, res, next) => {
+  console.log("se mandó a analizar un audio");
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

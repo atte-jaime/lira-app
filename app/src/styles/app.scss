@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+@import './variables';
+
+.app {
+  display: flex;
+  flex-flow: row nowrap;
+  font-family: $primary-font;
+
+  .sideBar {
+    width: 20%;
+    height: 100vh;
+    background-color: white;
+    padding-left: 5%;
+    //flex: .5;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    font-weight: 700;
+    box-shadow: 4px 0px 15px 0px rgba(0,0,0,0.5);
+
+    .active {
+      text-decoration-line: none;
+      color: $blue;
+    }
+
+    :not(.active) {
+      color: $dark-gray;
+      text-emphasis: none;
+      text-decoration: none;
+    }
+  }
+
+
+  .content {
+    width: 80%;
+    background: $light-gray;
+  }
+
+
+}

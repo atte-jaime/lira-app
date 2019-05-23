@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
+.app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.app .sideBar {
+  width: 20%;
+  height: 100vh;
+  background-color: white;
+  padding-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 700;
+  -webkit-box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.app .sideBar .active {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: #00C9FF;
+}
+
+.app .sideBar :not(.active) {
+  color: #595959;
+  -webkit-text-emphasis: none;
+          text-emphasis: none;
+  text-decoration: none;
+}
+
+.app .content {
+  width: 80%;
+  background: #FAFAFA;
+}
+/*# sourceMappingURL=app.css.map */

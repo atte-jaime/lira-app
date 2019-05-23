@@ -9,7 +9,7 @@ import Historial from './pages/historial/Historial';
 import Investigaciones from './pages/investigaciones/Investigaciones';
 import Comunidad from './pages/comunidad/Comunidad';
 import Configuracion from './pages/configuracion/Configuracion';
-
+import './styles/app.css'
 //import Upload from "./upload/Upload";
 //import Analize from "./analize/Analize"
 
@@ -17,14 +17,14 @@ class App extends Component {
   render() {
     return (
       <HashRouter>
-        <div>
-          <ul className="sideBar">
-            <li><NavLink exact to="/">Inicio</NavLink></li>
-            <li><NavLink to="/historial">Historial</NavLink></li>
-            <li><NavLink to="/investigaciones">Investigaciones</NavLink></li>
-            <li><NavLink to="/comunidad">Comunidad</NavLink></li>
-            <li><NavLink to="/configuracion">Configuración</NavLink></li>
-          </ul>
+        <div className="app">
+          <div className="sideBar">
+            <NavLink exact to="/">Inicio</NavLink>
+            <NavLink to="/historial">Historial</NavLink>
+            <NavLink to="/investigaciones">Investigaciones</NavLink>
+            <NavLink to="/comunidad">Comunidad</NavLink>
+            <NavLink to="/configuracion">Configuración</NavLink>
+          </div>
           <div className="content">
              <Route exact path='/' component={Inicio}/>
              <Route path='/historial' component={Historial}/>
