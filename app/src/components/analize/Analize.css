@@ -1,0 +1,27 @@
+.analize {
+  background-color: white;
+  min-width: 300px;
+  height: 400px;
+  -webkit-box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+          box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 5%;
+}
+
+.analize form {
+  margin: auto;
+}
+
+.analize form a {
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  background: linear-gradient(45deg, #00C9FF, #92FE9D);
+  -webkit-box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+          box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+  color: white;
+  text-decoration: none;
+  min-width: 150px;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+/*# sourceMappingURL=Analize.css.map */

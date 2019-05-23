@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+
+.analize {
+  background-color: white;
+  min-width: 300px;
+  height: 400px;
+  box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 5%;
+
+  form{
+    margin: auto;
+    a {
+      font-weight: 700;
+      font-size: 1rem;
+      text-align: center;
+      background: $gradient;
+      box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+      color: white;
+      text-decoration: none;
+      min-width: 150px;
+      padding: 10px 30px;
+      border-radius: 5px;
+    }
+  }
+}

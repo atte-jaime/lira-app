@@ -65,7 +65,12 @@ class Dropzone extends Component {
         onDragLeave={this.onDragLeave}
         onDrop={this.onDrop}
         onClick={this.openFileDialog}
-        style={{ cursor: this.props.disabled ? "default" : "pointer" }}
+        style={{ 
+          cursor: this.props.disabled ? "default" : "pointer",
+          visibility: this.props.disabled ? "hidden" : "visible",
+          width: this.props.disabled ? "0px" : "",
+          height: this.props.disabled ? "0px" : ""
+        }}
       >
         <input
           ref={this.fileInputRef}
@@ -79,7 +84,7 @@ class Dropzone extends Component {
           className="Icon"
           src="baseline-cloud_upload-24px.svg"
         />
-        <span>Upload Files</span>
+        <span>Subir archivos</span>
       </div>
     );
   }

@@ -1,0 +1,11 @@
+.content {
+  padding-top: 40px;
+  margin: 0 auto;
+}
+
+.content .dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=NewData.css.map */

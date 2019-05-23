@@ -1,26 +1,37 @@
 .Dropzone {
-  height: 200px;
-  width: 200px;
+  min-height: 400px;
+  min-width: 300px;
   background-color: #fff;
-  border: 2px dashed rgb(187, 186, 186);
-  border-radius: 50%;
+  -webkit-box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+          box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   font-size: 16px;
 }
 
-.Highlight {
-  background-color: rgb(188, 185, 236);
+.Dropzone .Highlight {
+  background-color: #bcb9ec;
 }
 
-.Icon {
+.Dropzone .Icon {
   opacity: 0.3;
   height: 64px;
   width: 64px;
 }
 
-.FileInput {
+.Dropzone .FileInput {
   display: none;
 }
+/*# sourceMappingURL=Dropzone.css.map */

@@ -11,8 +11,6 @@ import Comunidad from './pages/comunidad/Comunidad';
 import Configuracion from './pages/configuracion/Configuracion';
 import NewData from './pages/newData/NewData';
 import './styles/app.css'
-//import Upload from "./upload/Upload";
-//import Analize from "./analize/Analize"
 
 class App extends Component {
   render() {

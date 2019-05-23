@@ -1,75 +1,111 @@
 .Upload {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   text-align: left;
   overflow: hidden;
 }
 
-.Content {
+.Upload .Content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  padding-top: 16px;
-  box-sizing: border-box;
-  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.Files {
-  margin-left: 32px;
-  align-items: flex-start;
+.Upload .Content .Files {
+  margin-top: 32px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   justify-items: flex-start;
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   overflow-y: auto;
 }
 
-.Actions {
+.Upload .Content .Files .Row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex: 1;
-  width: 100%;
-  align-items: flex-end;
-  flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.Upload .Content .Files .Row .ProgressWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Upload .Content .Files .Row .ProgressWrapper .CheckIcon {
+  opacity: 0.5;
+  margin-left: 5px;
+}
+
+.Upload .Content .Files .Row .Filename {
+  font-size: 16px;
+  color: #595959;
+}
+
+.Upload .Actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 32px;
 }
 
-.Title {
-  margin-bottom: 32px;
-  color: #555;
-}
-
-.Filename {
-  margin-bottom: 8px;
+.Upload button {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   font-size: 16px;
-  color: #555;
-}
-
-.Row {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 50px;
-  padding: 8px;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.CheckIcon {
-  opacity: 0.5;
-  margin-left: 32px;
-}
-
-.ProgressWrapper {
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  align-items: center;
-}
-
-button {
-  font-family: "Roboto medium", sans-serif;
-  font-size: 14px;
-  display: inline-block;
+  font-weight: 700;
   height: 36px;
   min-width: 88px;
   padding: 6px 16px;
@@ -77,21 +113,27 @@ button {
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
   cursor: pointer;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   border: 0;
-  border-radius: 2px;
-  background: rgba(103, 58, 183, 1);
+  border-radius: 5px;
+  background: #00C9FF;
   color: #fff;
   outline: 0;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
-button:disabled {
-  background: rgb(189, 189, 189);
+.Upload button:hover {
+  color: #595959;
+  background-color: #92FE9D;
+}
+
+.Upload button:disabled {
+  background: #bdbdbd;
   cursor: default;
 }
+/*# sourceMappingURL=Upload.css.map */

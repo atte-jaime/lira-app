@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,QAAQ,CAAA;EAEN,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,MAAM;CAIf;;AAPD,AAIE,QAJM,CAIN,UAAU,CAAA;EACR,OAAO,EAAE,IAAI;CACd",
+    "sources": [
+        "NewData.scss",
+        "../../styles/_variables.scss"
+    ],
+    "names": [],
+    "file": "NewData.css"
+}

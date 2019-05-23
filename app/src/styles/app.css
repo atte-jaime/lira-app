@@ -11,6 +11,7 @@
 }
 
 .app .sideBar {
+  z-index: 9;
   width: 20%;
   height: 100vh;
   background-color: white;
@@ -29,8 +30,8 @@
           align-items: center;
   font-weight: 700;
   font-size: 1rem;
-  -webkit-box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+          box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
 }
 
 .app .sideBar .topSideBar {
@@ -97,5 +98,9 @@
 .app .content {
   width: 80%;
   background: #FAFAFA;
+}
+
+.app h1 {
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=app.css.map */
