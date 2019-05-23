@@ -14,7 +14,26 @@
   width: 20%;
   height: 100vh;
   background-color: white;
-  padding-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+  -webkit-box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.5);
+}
+
+.app .sideBar .topSideBar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,18 +44,50 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-weight: 700;
-  -webkit-box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.5);
-          box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.5);
+  padding: 30% 0;
 }
 
-.app .sideBar .active {
+.app .sideBar .topSideBar img {
+  margin: auto;
+  margin-bottom: 30%;
+}
+
+.app .sideBar .topSideBar .addData {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  min-width: 150px;
+  padding: 6% 12%;
+  background: linear-gradient(230.84deg, #92FE9D 2.28%, #00C9FF 102.8%);
+  -webkit-box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+          box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.app .sideBar .navegation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app .sideBar .navegation .menuBtn {
+  padding-bottom: 20%;
+}
+
+.app .sideBar .navegation .active {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
   color: #00C9FF;
 }
 
-.app .sideBar :not(.active) {
+.app .sideBar .navegation :not(.active) {
   color: #595959;
   -webkit-text-emphasis: none;
           text-emphasis: none;

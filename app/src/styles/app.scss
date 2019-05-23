@@ -10,23 +10,59 @@
     width: 20%;
     height: 100vh;
     background-color: white;
-    padding-left: 5%;
     //flex: .5;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
     font-weight: 700;
-    box-shadow: 4px 0px 15px 0px rgba(0,0,0,0.5);
+    font-size: 1rem;
+    box-shadow: 4px 0px 15px 0px rgba(0, 0, 0, 0.5);
 
-    .active {
-      text-decoration-line: none;
-      color: $blue;
+    .topSideBar {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      padding: 30% 0;
+
+      img {
+        margin: auto;
+        margin-bottom: 30%;
+      }
+
+      .addData {
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        min-width: 150px;
+        padding: 6% 12%;
+        background: linear-gradient(230.84deg, #92FE9D 2.28%, #00C9FF 102.8%);
+        box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+
+      }
+
     }
 
-    :not(.active) {
-      color: $dark-gray;
-      text-emphasis: none;
-      text-decoration: none;
+    .navegation {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+
+      .menuBtn{
+        padding-bottom: 20%;
+      }
+
+      .active {
+        text-decoration-line: none;
+        color: $blue;
+      }
+
+      :not(.active) {
+        color: $dark-gray;
+        text-emphasis: none;
+        text-decoration: none;
+      }
     }
   }
 

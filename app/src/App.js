@@ -9,6 +9,7 @@ import Historial from './pages/historial/Historial';
 import Investigaciones from './pages/investigaciones/Investigaciones';
 import Comunidad from './pages/comunidad/Comunidad';
 import Configuracion from './pages/configuracion/Configuracion';
+import NewData from './pages/newData/NewData';
 import './styles/app.css'
 //import Upload from "./upload/Upload";
 //import Analize from "./analize/Analize"
@@ -19,11 +20,17 @@ class App extends Component {
       <HashRouter>
         <div className="app">
           <div className="sideBar">
-            <NavLink exact to="/">Inicio</NavLink>
-            <NavLink to="/historial">Historial</NavLink>
-            <NavLink to="/investigaciones">Investigaciones</NavLink>
-            <NavLink to="/comunidad">Comunidad</NavLink>
-            <NavLink to="/configuracion">Configuración</NavLink>
+            <div className="topSideBar">
+              <img src={require('./img/Logo.png')} alt="logo" width="82" height="116"/>
+              <NavLink to="/newData" className="addData">Añadir datos</NavLink>
+            </div>
+            <div className="navegation">
+              <NavLink exact to="/" className="menuBtn">Inicio</NavLink>
+              <NavLink to="/historial" className="menuBtn">Historial</NavLink>
+              <NavLink to="/investigaciones" className="menuBtn">Investigaciones</NavLink>
+              <NavLink to="/comunidad" className="menuBtn">Comunidad</NavLink>
+              <NavLink to="/configuracion" className="menuBtn">Configuración</NavLink>
+            </div>
           </div>
           <div className="content">
              <Route exact path='/' component={Inicio}/>
@@ -31,6 +38,7 @@ class App extends Component {
              <Route path='/investigaciones' component={Investigaciones}/>
              <Route path='/comunidad' component={Comunidad}/>
              <Route path='/configuracion' component={Configuracion}/>
+             <Route path='/newData' component={NewData}/>
           </div>
         </div>
       </HashRouter>
