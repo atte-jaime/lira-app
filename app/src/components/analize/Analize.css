@@ -1,17 +1,28 @@
 .analize {
   background-color: white;
-  min-width: 300px;
+  width: 400px;
   height: 400px;
   -webkit-box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
           box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
   border-radius: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
 }
 
-.analize form {
+.analize p {
+  padding-left: 2rem;
+  padding-right: 1rem;
+}
+
+.analize a {
+  position: relative;
+  bottom: 0px;
   margin: auto;
-}
-
-.analize form a {
   font-weight: 700;
   font-size: 1rem;
   text-align: center;
@@ -23,5 +34,10 @@
   min-width: 150px;
   padding: 10px 30px;
   border-radius: 5px;
+}
+
+.analize a:hover {
+  position: relative;
+  top: 1px;
 }
 /*# sourceMappingURL=Analize.css.map */

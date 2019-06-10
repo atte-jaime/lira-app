@@ -72,7 +72,7 @@ class Upload extends Component {
 
       const formData = new FormData();
       formData.append("file", file, file.name);
-      console.log(file.name);
+      //console.log(file.name);
       req.open("POST", "http://localhost:8000/upload");
       req.send(formData);
     });
@@ -127,7 +127,7 @@ class Upload extends Component {
     return (
       <div className="Upload">
         <div className="Content">
-          <div>
+          <div className="drop">
             <Dropzone
               onFilesAdded={this.onFilesAdded}
               disabled={this.state.uploading || this.state.successfullUploaded}
@@ -142,9 +142,9 @@ class Upload extends Component {
                 </div>
               );
             })}
+            <div className="Actions">{this.renderActions()}</div>
           </div>
         </div>
-        <div className="Actions">{this.renderActions()}</div>
       </div>
     );
   }

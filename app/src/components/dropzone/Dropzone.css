@@ -19,6 +19,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 16px;
+  border: 1px dashed #C4C4C4;
 }
 
 .Dropzone .Highlight {

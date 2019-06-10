@@ -12,6 +12,8 @@
   justify-content: center;
   flex-direction: column;
   font-size: 16px;
+
+  border: 1px dashed $middle-gray;
   .Highlight {
     background-color: rgb(188, 185, 236);
   }

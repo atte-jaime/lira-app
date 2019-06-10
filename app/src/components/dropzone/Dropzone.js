@@ -67,7 +67,7 @@ class Dropzone extends Component {
         onClick={this.openFileDialog}
         style={{ 
           cursor: this.props.disabled ? "default" : "pointer",
-          visibility: this.props.disabled ? "hidden" : "visible",
+          //visibility: this.props.disabled ? "hidden" : "visible",
           width: this.props.disabled ? "0px" : "",
           height: this.props.disabled ? "0px" : ""
         }}
