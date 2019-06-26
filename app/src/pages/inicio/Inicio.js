@@ -4,7 +4,7 @@ class Inicio extends Component {
   render() {
     return (
       <div>
-        <img src={require('../../img/inicio.png')}></img>
+        <img src={require('../../img/inicio.png')} alt="inicio"></img>
       </div>
     );
   }

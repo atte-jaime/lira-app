@@ -1,6 +1,7 @@
 @import '../../styles/variables';
 
-.analize {
+.Analize {
+  margin: 0 3rem;
   background-color: white;
   width: 400px;
   height: 400px;
@@ -14,25 +15,34 @@
     padding-right: 1rem;
   }
   
-  a {
-    position: relative;
-    bottom: 0px;
-    margin: auto;
+  button {
+    font-family: $primary-font;
+    font-size: 16px;
     font-weight: 700;
-    font-size: 1rem;
+    position: relative;
+    margin: auto;
+    height: 36px;
+    width: 200px;
+    padding: 6px 16px;
+    line-height: 1.42857143;
     text-align: center;
-    background: $gradient;
-    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
-    color: white;
-    text-decoration: none;
-    min-width: 150px;
-    padding: 10px 30px;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: 0;
     border-radius: 5px;
-
-    &:hover {
-      position: relative;
-      top: 1px;
+    background: $gradient;
+    color: #fff;
+    outline: 0;
+    transition: 0.2s ease-in-out;
+    &:hover{
+      color: $dark-gray;
+      background-color: $green;
     }
-
+    &:disabled {
+      background: rgb(189, 189, 189);
+      cursor: default;
+    }
   }
 }
