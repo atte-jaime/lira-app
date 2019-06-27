@@ -8,7 +8,8 @@ class Dashboard extends Component {
 
         return (
             <div className="Dash">
-                <Spline />                
+                <Spline />
+                             
             </div>
         );
     }

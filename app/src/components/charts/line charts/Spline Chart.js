@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import CanvasJSReact from '../../../assets/canvasjs.react';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
- 
+var dataPoints =[];
+
 class SplineChart extends Component {
 	render() {
 		const options = {
@@ -21,20 +22,7 @@ class SplineChart extends Component {
 				yValueFormatString: "$#,###",
 				xValueFormatString: "MMMM",
 				type: "spline",
-				dataPoints: [
-					{ x: new Date(2017, 0), y: 25060 },
-					{ x: new Date(2017, 1), y: 27980 },
-					{ x: new Date(2017, 2), y: 42800 },
-					{ x: new Date(2017, 3), y: 32400 },
-					{ x: new Date(2017, 4), y: 35260 },
-					{ x: new Date(2017, 5), y: 33900 },
-					{ x: new Date(2017, 6), y: 40000 },
-					{ x: new Date(2017, 7), y: 52500 },
-					{ x: new Date(2017, 8), y: 32300 },
-					{ x: new Date(2017, 9), y: 42000 },
-					{ x: new Date(2017, 10), y: 37160 },
-					{ x: new Date(2017, 11), y: 38400 }
-				]
+				dataPoints: dataPoints
 			}]
 		}
 		
@@ -42,11 +30,28 @@ class SplineChart extends Component {
 		<div>
 			<h1>React Spline Chart</h1>
 			<CanvasJSChart options = {options} 
-				/* onRef={ref => this.chart = ref} */
+				onRef={ref => this.chart = ref} 
 			/>
 			{/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
 		</div>
 		);
+	}
+
+	componentDidMount(){
+		var chart = this.chart;
+		fetch('http://localhost:8000/public/data/nifty-stock-price.json')
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(data) {
+			for (var i = 0; i < data.length; i++) {
+				dataPoints.push({
+					x: new Date(data[i].x),
+					y: data[i].y
+				});
+			}
+			chart.render();
+		});
 	}
 }
 

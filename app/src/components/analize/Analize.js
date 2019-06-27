@@ -9,7 +9,7 @@ constructor(props){
 }
 
   render(){
-
+    
     return(
       <div className="Analize"> 
       <button onClick={this.analizeAudio}>Analizar datos</button>

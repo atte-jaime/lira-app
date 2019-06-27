@@ -42,41 +42,6 @@ app.post('/upload', (req, res, next) => {
 
 app.post('/analize', (req, res, next) => {
   console.log("Se recibió solicitud");
-  
-  
-  
-  let indexR= Math.floor(Math.random() * 2)+1; 
-  let element1 = './public/audios/AUDIO'+indexR+'.wav';
-  
-  const speechToText = new SpeechToTextV1({
-    iam_apikey:'bt4XBwSUa9SbbMIQ0nkDRd0Yx-LihQYH7AMZlYCfe25_'
-  });
-
-  const recognizeParams = {
-    audio: fs.createReadStream(element1),
-    content_type : 'audio/wav',
-    model: 'es-ES_BroadbandModel',
-    word_alternatives_threshold: 0.9,
-    keywords: ['prueba'],
-    keywords_threshold: 0.5,
-  };
-  
-  let result = speechToText.recognize(recognizeParams)
-    .then(speechRecognitionResults => {
-      const result = speechRecognitionResults.results[0].alternatives[0].transcript;
-      //console.log(result);
-      
-      res.json(result);
-      // console.log({transcript: result});
-      return result;
-      //console.log(JSON.stringify(speechRecognitionResults, null, 2));
-    })
-    .catch(err => {
-      console.log('error:', err);
-      res.status(500).send(err);
-    });
-    
-
 });
 
 
@@ -98,38 +63,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
-
-analizeAudio = (sound) => {
-  // for (let index = 0; index < 2; index++) {
-    // const element = "./public/audios/prueba_audio"+(index+1)+".mp3";
-    
-    const speechToText = new SpeechToTextV1({
-      iam_apikey:'bt4XBwSUa9SbbMIQ0nkDRd0Yx-LihQYH7AMZlYCfe25_'
-    });
-
-    const recognizeParams = {
-      audio: fs.createReadStream(sound),
-      content_type : 'audio/mp3',
-      model: 'es-ES_BroadbandModel',
-      word_alternatives_threshold: 0.9,
-      keywords: ['prueba'],
-      keywords_threshold: 0.5,
-    };
-    
-    return speechToText.recognize(recognizeParams)
-      .then(speechRecognitionResults => {
-        const result = speechRecognitionResults.results[0].alternatives[0].transcript;
-        console.log(result);
-        return result;
-        //console.log(JSON.stringify(speechRecognitionResults, null, 2));
-      })
-      .catch(err => {
-        console.log('error:', err);
-      });
-  //}
-}
-
 
 
 app.listen(8000, () => {

@@ -14,7 +14,10 @@ class NewData extends Component {
   render() {
     return (
       <div className="content">
-        <h1>Añadir datos</h1 >
+        
+        {!this.state.isDataReady? 
+        <h1>Añadir datos</h1 > :   
+        <h1>Datos nuevos</h1 > }
         
         {!this.state.isDataReady? 
         <div className="dashboard"> <Upload /> <Analize /></div> :   
