@@ -19,7 +19,9 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(cors());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 app.use(fileUpload());
 app.use('/public', express.static(__dirname + '/public'));
@@ -28,33 +30,58 @@ app.use('/public', express.static(__dirname + '/public'));
 app.post('/upload', (req, res, next) => {
   //console.log(req);
   let audioFile = req.files.file;
-  
+
   // Si el archivo falla, colocar .mp3 al final del nombre
-  audioFile.mv(`${__dirname}/public/audios/${audioFile.name}`, function(err) {
+  audioFile.mv(`${__dirname}/public/audios/${audioFile.name}`, function (err) {
     if (err) {
       return res.status(500).send(err);
     }
-  // Igual aquí  
-    res.json({file: `public/audios/${audioFile.name}`});
+    // Igual aquí  
+    res.json({
+      file: `public/audios/${audioFile.name}`
+    });
   });
 
 });
 
 app.post('/analize', (req, res, next) => {
   console.log("Se recibió solicitud");
+
+  const speechToText = new SpeechToTextV1({
+    iam_apikey: 'bt4XBwSUa9SbbMIQ0nkDRd0Yx-LihQYH7AMZlYCfe25_',
+  });
+
+  const recognizeParams = {
+    audio: fs.createReadStream('./public/audios/audio1.mp3'),
+    model: 'es-ES_BroadbandModel',
+    content_type: 'audio/mp3',
+    word_alternatives_threshold: 0.9,
+    keywords: ['especie', 'individuos'],
+    keywords_threshold: 0.5,
+  };
+
+  speechToText.recognize(recognizeParams)
+    .then(speechRecognitionResults => {
+      var trans = speechRecognitionResults.results[0].alternatives[0].transcript;
+      console.log(trans);
+      //console.log(JSON.stringify(speechRecognitionResults, null, 2));
+    })
+    .catch(err => {
+      console.log('error:', err);
+    });
 });
 
 
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

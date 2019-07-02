@@ -9,7 +9,7 @@ constructor(props){
 }
 
   render(){
-    
+
     return(
       <div className="Analize"> 
       <button onClick={this.analizeAudio}>Analizar datos</button>
@@ -17,5 +17,10 @@ constructor(props){
     )
   }
 
+  analizeAudio(){
+    var request = new XMLHttpRequest();
+    request.open('POST', 'http://localhost:8000/analize', true);
+    request.send();
+  }
 
 }
