@@ -9,7 +9,7 @@ const cors = require('cors');
 const fs = require('fs');
 const SpeechToTextV1 = require('ibm-watson/speech-to-text/v1');
 const app = express();
-
+let transcriptedData = [];
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -51,26 +51,47 @@ app.post('/analize', (req, res, next) => {
     iam_apikey: 'bt4XBwSUa9SbbMIQ0nkDRd0Yx-LihQYH7AMZlYCfe25_',
   });
 
+  const analize = async() => {
+   /* const tempTrans = await getTranscript(speechToText,1);
+    const tempTrans2 = await getTranscript(speechToText,2); 
+    const holi =  [tempTrans,tempTrans2];
+    return holi; */
+
+    for (let i = 1; i < 7; i++) {
+      getTranscript(speechToText,i);
+    }
+
+  } 
+
+  analize().then(temp => console.log(temp));
+  
+});
+
+const getTranscript = async(speechKey, num) =>{
+  const audioPath = './public/audios/audio'+num+'.mp3';
+
   const recognizeParams = {
-    audio: fs.createReadStream('./public/audios/audio1.mp3'),
+    audio: fs.createReadStream(audioPath),
     model: 'es-ES_BroadbandModel',
     content_type: 'audio/mp3',
     word_alternatives_threshold: 0.9,
-    keywords: ['especie', 'individuos'],
+    keywords: ['especie', 'distancia', 'individuos'],
     keywords_threshold: 0.5,
   };
 
-  speechToText.recognize(recognizeParams)
+  speechKey.recognize(recognizeParams)
     .then(speechRecognitionResults => {
-      var trans = speechRecognitionResults.results[0].alternatives[0].transcript;
-      console.log(trans);
+      var temp= speechRecognitionResults.results[0].alternatives[0].transcript;
+      transcriptedData.push(temp);
+      console.log("num: "+num+" "+temp);
       //console.log(JSON.stringify(speechRecognitionResults, null, 2));
     })
     .catch(err => {
       console.log('error:', err);
     });
-});
 
+
+}
 
 
 // catch 404 and forward to error handler
