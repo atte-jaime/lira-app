@@ -51,24 +51,73 @@ app.post('/analize', (req, res, next) => {
     iam_apikey: 'bt4XBwSUa9SbbMIQ0nkDRd0Yx-LihQYH7AMZlYCfe25_',
   });
 
-  const analize = async() => {
-   /* const tempTrans = await getTranscript(speechToText,1);
-    const tempTrans2 = await getTranscript(speechToText,2); 
-    const holi =  [tempTrans,tempTrans2];
-    return holi; */
+  const analize = async () => {
+    /* const tempTrans = await getTranscript(speechToText,1);
+     const tempTrans2 = await getTranscript(speechToText,2); 
+     const holi =  [tempTrans,tempTrans2];
+     return holi; */
+    var datos = [];
 
-    for (let i = 1; i < 7; i++) {
-      getTranscript(speechToText,i);
+    for (let i = 1; i < 10; i++) {
+      datos.push(await getTranscript(speechToText, i));
     }
+    return datos;
+  }
 
-  } 
+  analize().then(tempTranscript => {
+    tempTranscript.forEach(element => {
+      var tempData = element.split(",");
+      var tempText = tempData[1].split(" ");
 
-  analize().then(temp => console.log(temp));
-  
+      var especieLoc = "";
+      var distanciaLoc = "";
+      var individuosLoc = "";
+      var actividadLoc = "";
+
+      for (let i = 0; i < tempText.length; i++) {
+        const variable = tempText[i];
+        variable === "especie" ? especieLoc = i : null;
+        variable === "distancia" ? distanciaLoc = i : null;
+        variable === "número" ? individuosLoc = i : null;
+        variable === "actividad" ? actividadLoc = i : null;
+      }
+      
+      var especie = tempText.slice(especieLoc, distanciaLoc);
+      var distancia = tempText.slice(distanciaLoc, individuosLoc);
+      var individuos = tempText.slice(individuosLoc, actividadLoc);
+      var actividad = tempText.slice(actividadLoc);
+
+      var datoCompleto = {
+        numAudio : tempData[0],
+        especie : especie[especie.length-1],
+        distancia: {
+          valor: distancia[1],
+          unidad: distancia[distancia.length-1]
+        },
+        individuos : individuos[individuos.length-1],
+        actividad : actividad[1]
+      }
+
+      //console.log("especie en: "+especieLoc + ", distancia en:" + distanciaLoc + ", número de individuos en: " + individuosLoc + ", actividad en: " + actividadLoc);
+      console.log("audio num: " + tempData[0] + ", " + tempData[1]);
+      console.log(especie, distancia, individuos, actividad);  
+      console.log(datoCompleto);
+      console.log("");
+
+      /* 
+
+      */
+      //console.log("audio numero: "+ tempData[0]+", "+tempData[1]);
+    });
+    //console.log(tempTranscript);
+
+
+  });
+
 });
 
-const getTranscript = async(speechKey, num) =>{
-  const audioPath = './public/audios/audio'+num+'.mp3';
+const getTranscript = async (speechKey, num) => {
+  const audioPath = './public/audios/audio' + num + '.mp3';
 
   const recognizeParams = {
     audio: fs.createReadStream(audioPath),
@@ -79,17 +128,19 @@ const getTranscript = async(speechKey, num) =>{
     keywords_threshold: 0.5,
   };
 
-  speechKey.recognize(recognizeParams)
+  var transcripcion = await speechKey.recognize(recognizeParams)
     .then(speechRecognitionResults => {
-      var temp= speechRecognitionResults.results[0].alternatives[0].transcript;
-      transcriptedData.push(temp);
-      console.log("num: "+num+" "+temp);
+      var temp = num + "," + speechRecognitionResults.results[0].alternatives[0].transcript;
+      return temp;
+      //transcriptedData.push(temp);
+      //console.log("num: " + num + " " + temp);
       //console.log(JSON.stringify(speechRecognitionResults, null, 2));
     })
     .catch(err => {
       console.log('error:', err);
     });
 
+  return transcripcion;
 
 }
 
