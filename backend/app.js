@@ -74,6 +74,7 @@ app.post('/analize', (req, res, next) => {
       var individuosLoc = "";
       var actividadLoc = "";
 
+      // Posiciones de las variables en el texto transcrito
       for (let i = 0; i < tempText.length; i++) {
         const variable = tempText[i];
         variable === "especie" ? especieLoc = i : null;
@@ -81,26 +82,32 @@ app.post('/analize', (req, res, next) => {
         variable === "número" ? individuosLoc = i : null;
         variable === "actividad" ? actividadLoc = i : null;
       }
-      
+
+      // Arreglos con las variables
       var especie = tempText.slice(especieLoc, distanciaLoc);
       var distancia = tempText.slice(distanciaLoc, individuosLoc);
       var individuos = tempText.slice(individuosLoc, actividadLoc);
       var actividad = tempText.slice(actividadLoc);
 
+      // Construcción del dato en formato de objeto
       var datoCompleto = {
-        numAudio : tempData[0],
-        especie : especie[especie.length-1],
+        puntoCaptura: 1,
+        numAudio: tempData[0],
+        especie: especie[especie.length - 1],
         distancia: {
-          valor: distancia[1],
-          unidad: distancia[distancia.length-1]
+          valor: convertirNum(distancia[1]),
+          unidad: distancia[distancia.length - 1]
         },
-        individuos : individuos[individuos.length-1],
-        actividad : actividad[1]
+        individuos: convertirNum(individuos[individuos.length - 1]),
+        actividad: actividad[1]
       }
+
+      transcriptedData.push(datoCompleto);
+
 
       //console.log("especie en: "+especieLoc + ", distancia en:" + distanciaLoc + ", número de individuos en: " + individuosLoc + ", actividad en: " + actividadLoc);
       console.log("audio num: " + tempData[0] + ", " + tempData[1]);
-      console.log(especie, distancia, individuos, actividad);  
+      console.log(especie, distancia, individuos, actividad);
       console.log(datoCompleto);
       console.log("");
 
@@ -109,12 +116,39 @@ app.post('/analize', (req, res, next) => {
       */
       //console.log("audio numero: "+ tempData[0]+", "+tempData[1]);
     });
+
     //console.log(tempTranscript);
 
+    let data = JSON.stringify(transcriptedData, null, 2);
+
+      fs.writeFile('./public/data/valores-raw.json', data, (err) => {
+        if (err) throw err;
+        console.log('Datos escritos');
+      });
 
   });
 
 });
+
+const convertirNum = (numEscrito) => {
+  var numTrans = "";
+  var numText = [
+    "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve",
+    "diez", "once", "doce", "trece", "catorce", "quince", "dieciséis", "diecisiete",
+    "dieciocho", "diecinueve", "veinte", "veintiuno", "veintidós", "veintitrés",
+    "veinticuatro", "veinticinco", "veintiséis", "veintisiete", "veintiocho",
+    "veintinueve", "treinta"
+  ]
+
+  for (let i = 0; i < numText.length; i++) {
+    const pos = numText[i];
+    if (numEscrito === pos) {
+      numTrans = i+1;
+    }
+  }
+
+  return parseInt(numTrans);
+}
 
 const getTranscript = async (speechKey, num) => {
   const audioPath = './public/audios/audio' + num + '.mp3';

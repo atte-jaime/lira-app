@@ -1,0 +1,101 @@
+[
+  {
+    "puntoCaptura": 1,
+    "numAudio": "1",
+    "especie": "azulejo",
+    "distancia": {
+      "valor": null,
+      "unidad": "metros"
+    },
+    "individuos": 8,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 1,
+    "numAudio": "2",
+    "especie": "azulejo",
+    "distancia": {
+      "valor": 19,
+      "unidad": "metros"
+    },
+    "individuos": 15,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 1,
+    "numAudio": "3",
+    "especie": "perico",
+    "distancia": {
+      "valor": 3,
+      "unidad": "metros"
+    },
+    "individuos": 3,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 1,
+    "numAudio": "4",
+    "especie": "azulejo",
+    "distancia": {
+      "valor": null,
+      "unidad": "metros"
+    },
+    "individuos": 8,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 1,
+    "numAudio": "5",
+    "especie": "azulejo",
+    "distancia": {
+      "valor": null,
+      "unidad": "metros"
+    },
+    "individuos": 8,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 1,
+    "numAudio": "6",
+    "especie": "azulejo",
+    "distancia": {
+      "valor": 19,
+      "unidad": "metros"
+    },
+    "individuos": 15,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 1,
+    "numAudio": "7",
+    "especie": "azulejo",
+    "distancia": {
+      "valor": 19,
+      "unidad": "metros"
+    },
+    "individuos": 15,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 1,
+    "numAudio": "8",
+    "especie": "perico",
+    "distancia": {
+      "valor": 3,
+      "unidad": "metros"
+    },
+    "individuos": 3,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 1,
+    "numAudio": "9",
+    "especie": "perico",
+    "distancia": {
+      "valor": 3,
+      "unidad": "metros"
+    },
+    "individuos": 3,
+    "actividad": "volando"
+  }
+]

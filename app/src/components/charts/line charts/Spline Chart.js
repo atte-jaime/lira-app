@@ -8,19 +8,18 @@ class SplineChart extends Component {
 		const options = {
 			animationEnabled: true,
 			title:{
-				text: "Monthly Sales - 2017"
+				text: "Aves por punto de captura"
 			},
 			axisX: {
-				valueFormatString: "MMM"
+				title: "Puntos de Captura",
+				//valueFormatString: "MMM"
 			},
 			axisY: {
-				title: "Sales (in USD)",
-				prefix: "$",
+				title: "Número de individuos",
+				//prefix: "#",
 				includeZero: false
 			},
 			data: [{
-				yValueFormatString: "$#,###",
-				xValueFormatString: "MMMM",
 				type: "spline",
 				dataPoints: dataPoints
 			}]
@@ -46,7 +45,7 @@ class SplineChart extends Component {
 		.then(function(data) {
 			for (var i = 0; i < data.length; i++) {
 				dataPoints.push({
-					x: new Date(data[i].x),
+					x: data[i].x,
 					y: data[i].y
 				});
 			}
