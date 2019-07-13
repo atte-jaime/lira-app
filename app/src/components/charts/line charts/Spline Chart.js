@@ -12,6 +12,7 @@ class SplineChart extends Component {
 			},
 			axisX: {
 				title: "Puntos de Captura",
+				lineColor: "white",
 				minimum: 0,
 				maximum: 11
 			},

@@ -6,7 +6,7 @@ class Dashboard extends Component {
     constructor(props){
         super(props);
         this.state = {
-            dataLoaded: false
+            dataLoaded: true
         }
     }
 
@@ -14,7 +14,15 @@ class Dashboard extends Component {
 
         return (
             <div className="Dash">
-                {!this.state.dataLoaded? <h1>Analizando datos</h1>: <Spline />}                             
+                {!this.state.dataLoaded? <h1>Analizando datos</h1> : this.dash()}                             
+            </div>
+        );
+    }
+
+    dash = () => {
+        return(
+            <div>
+                <Spline/>
             </div>
         );
     }
