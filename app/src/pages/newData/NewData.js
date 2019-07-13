@@ -11,21 +11,29 @@ class NewData extends Component {
       isDataReady: false,
     }
   }
+
   render() {
     return (
       <div className="content">
         
         {!this.state.isDataReady? 
         <h1>Añadir datos</h1 > :   
-        <h1>Datos nuevos</h1 > }
+        null}
+
         
-        {!this.state.isDataReady? 
-        <div className="dashboard"> <Upload /> <Analize /></div> :   
-        <Dashboard /> }
-        
+        {!this.state.isDataReady?
+        <div className="dashboard"> <Upload /> <div onClick={this.transcriptData}><Analize/></div></div>
+        : <Dashboard />
+        }
       </div>
-    );
+    );    
   }
+
+  transcriptData = async(e) => {
+    console.log("di click");
+    this.setState({isDataReady: true});
+  }
+  
 }
  
 export default NewData; 

@@ -119,16 +119,46 @@ app.post('/analize', (req, res, next) => {
 
     //console.log(tempTranscript);
 
-    let data = JSON.stringify(transcriptedData, null, 2);
+    
 
-      fs.writeFile('./public/data/valores-raw.json', data, (err) => {
-        if (err) throw err;
-        console.log('Datos escritos');
-      });
+    let data = crearNuevosDatos();
+
+    fs.writeFile('./public/data/valores-raw.json', data, (err) => {
+      if (err) throw err;
+      console.log('Datos escritos');
+    });
 
   });
 
 });
+
+const crearNuevosDatos = () =>{
+  
+  function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min) ) + min;
+  }
+
+  var especie=["azulejo", "canario", "carpintero", "perico", "torcasa"];
+  var actividad = ["volando", "reposo", "incubando"];
+
+  for (let i = 0; i < 40; i++) {
+    var datoCompleto = {
+      puntoCaptura: getRndInteger(2,11),
+      numAudio: 0,
+      especie: especie[getRndInteger(0, especie.length)],
+      distancia: {
+        valor: getRndInteger(2,30),
+        unidad: "metros"
+      },
+      individuos: getRndInteger(3,15),
+      actividad: actividad[getRndInteger(0,actividad.length)]
+    }
+    transcriptedData.push(datoCompleto);
+  }
+
+  let data = JSON.stringify(transcriptedData, null, 2);
+  return data;
+}
 
 const convertirNum = (numEscrito) => {
   var numTrans = "";

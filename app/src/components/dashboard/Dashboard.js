@@ -3,17 +3,32 @@ import Spline from '../charts/line charts/Spline Chart';
 import '../dashboard/Dashboard.css';
 
 class Dashboard extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            dataLoaded: false
+        }
+    }
 
     render() {
 
         return (
             <div className="Dash">
-                <Spline />
-                             
+                {!this.state.dataLoaded? <h1>Analizando datos</h1>: <Spline />}                             
             </div>
         );
     }
 
+    timerAnalisis = () =>{
+        setTimeout(()=>{
+            console.log("cambio de estado a loaded");
+            this.setState({dataLoaded:true});
+        }, 60000);
+    }
+
+    componentDidMount(){
+        this.timerAnalisis();
+    }
 }
 
 export default Dashboard;
