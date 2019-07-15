@@ -1,4 +1,26 @@
-.singleData{
-    display: flex,
-    
-}   
+.singleData {
+    margin-top: 5rem;
+    margin-right: 3rem;
+    background-color: white;
+    //height: 120px;
+    width: 200px; 
+    padding: 1rem 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+
+    .single {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-items:center;
+        align-items: center;
+        h1 {
+            font-size: 3rem;
+            color:#92FE9D;
+        }
+    }
+
+}

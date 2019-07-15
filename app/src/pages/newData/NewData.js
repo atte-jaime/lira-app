@@ -8,13 +8,13 @@ class NewData extends Component {
   constructor(props){
     super(props);
     this.state = {
-      isDataReady: true,
+      isDataReady: false,
     }
   }
 
   render() {
     return (
-      <div className="content">
+      <div className="contenido">
         
         {!this.state.isDataReady? 
         <h1>Añadir datos</h1 > :   

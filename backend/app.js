@@ -150,7 +150,7 @@ const crearNuevosDatos = () =>{
         valor: getRndInteger(2,30),
         unidad: "metros"
       },
-      individuos: getRndInteger(3,15),
+      individuos: getRndInteger(5,40),
       actividad: actividad[getRndInteger(0,actividad.length)]
     }
     transcriptedData.push(datoCompleto);

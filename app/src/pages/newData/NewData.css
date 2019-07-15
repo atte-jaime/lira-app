@@ -1,9 +1,9 @@
-.content {
-  padding-top: 40px;
-  margin: 0 auto;
+.contenido {
+  padding: 6%;
+  margin: auto;
 }
 
-.content .dashboard {
+.contenido .dashboard {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -3,41 +3,38 @@ import CanvasJSReact from '../../../assets/canvasjs.react';
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 var dataPoints =[];
 
-class SplineChart extends Component {
+class PieChart extends Component {
 	render() {
 		const options = {
 			animationEnabled: true,
-			title:{
-				text: "Aves por punto de captura"
+			title: {
+				text: "Customer Satisfaction"
 			},
-			axisX: {
-				title: "Puntos de Captura",
-				lineColor: "white",
-				minimum: 0,
-				maximum: 11
-			},
-			axisY: {
-				title: "Número de individuos",
-				includeZero: false
-			},
+			subtitles: [{
+				text: "71% Positive",
+				verticalAlign: "center",
+				fontSize: 24,
+				dockInsidePlotArea: true
+			}],
 			data: [{
-				type: "spline",
+				type: "doughnut",
+				showInLegend: true,
+				indexLabel: "{name}: {y}",
+				yValueFormatString: "#,###'%'",
 				dataPoints: dataPoints
 			}]
 		}
-		
 		return (
 		<div>
-			
-			<CanvasJSChart options = {options} 
-				onRef={ref => this.chart = ref} 
+			<CanvasJSChart options = {options}
+				 onRef={ref => this.chart = ref} 
 			/>
 			{/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
 		</div>
 		);
-	}
-
-	componentDidMount(){
+    }
+    
+    componentDidMount(){
 		var chart = this.chart;
 		fetch('http://localhost:8000/public/data/valores-raw.json')
 		.then(function(response) {
@@ -74,8 +71,6 @@ class SplineChart extends Component {
 			chart.render();
 		});
 	}
-
-
 }
 
-export default SplineChart;                           
+export default PieChart;

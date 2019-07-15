@@ -99,443 +99,443 @@
     "actividad": "volando"
   },
   {
-    "puntoCaptura": 10,
+    "puntoCaptura": 9,
     "numAudio": 0,
-    "especie": "perico",
+    "especie": "carpintero",
     "distancia": {
-      "valor": 14,
+      "valor": 25,
       "unidad": "metros"
     },
-    "individuos": 14,
-    "actividad": "volando"
+    "individuos": 29,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 10,
+    "numAudio": 0,
+    "especie": "azulejo",
+    "distancia": {
+      "valor": 20,
+      "unidad": "metros"
+    },
+    "individuos": 20,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 5,
+    "numAudio": 0,
+    "especie": "azulejo",
+    "distancia": {
+      "valor": 11,
+      "unidad": "metros"
+    },
+    "individuos": 28,
+    "actividad": "incubando"
   },
   {
     "puntoCaptura": 6,
     "numAudio": 0,
-    "especie": "torcasa",
+    "especie": "azulejo",
+    "distancia": {
+      "valor": 4,
+      "unidad": "metros"
+    },
+    "individuos": 17,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 8,
+    "numAudio": 0,
+    "especie": "canario",
+    "distancia": {
+      "valor": 27,
+      "unidad": "metros"
+    },
+    "individuos": 7,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 8,
+    "numAudio": 0,
+    "especie": "perico",
+    "distancia": {
+      "valor": 5,
+      "unidad": "metros"
+    },
+    "individuos": 21,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 2,
+    "numAudio": 0,
+    "especie": "canario",
     "distancia": {
       "valor": 10,
       "unidad": "metros"
     },
-    "individuos": 4,
+    "individuos": 29,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 3,
+    "numAudio": 0,
+    "especie": "azulejo",
+    "distancia": {
+      "valor": 4,
+      "unidad": "metros"
+    },
+    "individuos": 18,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 6,
+    "numAudio": 0,
+    "especie": "azulejo",
+    "distancia": {
+      "valor": 21,
+      "unidad": "metros"
+    },
+    "individuos": 14,
     "actividad": "reposo"
+  },
+  {
+    "puntoCaptura": 6,
+    "numAudio": 0,
+    "especie": "azulejo",
+    "distancia": {
+      "valor": 23,
+      "unidad": "metros"
+    },
+    "individuos": 8,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 2,
+    "numAudio": 0,
+    "especie": "canario",
+    "distancia": {
+      "valor": 16,
+      "unidad": "metros"
+    },
+    "individuos": 29,
+    "actividad": "reposo"
+  },
+  {
+    "puntoCaptura": 2,
+    "numAudio": 0,
+    "especie": "canario",
+    "distancia": {
+      "valor": 7,
+      "unidad": "metros"
+    },
+    "individuos": 7,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 3,
+    "numAudio": 0,
+    "especie": "carpintero",
+    "distancia": {
+      "valor": 21,
+      "unidad": "metros"
+    },
+    "individuos": 23,
+    "actividad": "incubando"
   },
   {
     "puntoCaptura": 2,
     "numAudio": 0,
     "especie": "perico",
     "distancia": {
+      "valor": 29,
+      "unidad": "metros"
+    },
+    "individuos": 15,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 6,
+    "numAudio": 0,
+    "especie": "azulejo",
+    "distancia": {
       "valor": 20,
+      "unidad": "metros"
+    },
+    "individuos": 23,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 4,
+    "numAudio": 0,
+    "especie": "perico",
+    "distancia": {
+      "valor": 27,
+      "unidad": "metros"
+    },
+    "individuos": 34,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 2,
+    "numAudio": 0,
+    "especie": "azulejo",
+    "distancia": {
+      "valor": 22,
+      "unidad": "metros"
+    },
+    "individuos": 24,
+    "actividad": "reposo"
+  },
+  {
+    "puntoCaptura": 3,
+    "numAudio": 0,
+    "especie": "azulejo",
+    "distancia": {
+      "valor": 19,
+      "unidad": "metros"
+    },
+    "individuos": 13,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 7,
+    "numAudio": 0,
+    "especie": "torcasa",
+    "distancia": {
+      "valor": 6,
+      "unidad": "metros"
+    },
+    "individuos": 39,
+    "actividad": "reposo"
+  },
+  {
+    "puntoCaptura": 7,
+    "numAudio": 0,
+    "especie": "carpintero",
+    "distancia": {
+      "valor": 20,
+      "unidad": "metros"
+    },
+    "individuos": 24,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 3,
+    "numAudio": 0,
+    "especie": "canario",
+    "distancia": {
+      "valor": 29,
+      "unidad": "metros"
+    },
+    "individuos": 16,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 6,
+    "numAudio": 0,
+    "especie": "canario",
+    "distancia": {
+      "valor": 21,
+      "unidad": "metros"
+    },
+    "individuos": 23,
+    "actividad": "reposo"
+  },
+  {
+    "puntoCaptura": 3,
+    "numAudio": 0,
+    "especie": "perico",
+    "distancia": {
+      "valor": 26,
       "unidad": "metros"
     },
     "individuos": 6,
     "actividad": "volando"
   },
   {
-    "puntoCaptura": 7,
+    "puntoCaptura": 4,
     "numAudio": 0,
-    "especie": "azulejo",
+    "especie": "torcasa",
     "distancia": {
-      "valor": 7,
+      "valor": 17,
       "unidad": "metros"
     },
-    "individuos": 4,
-    "actividad": "incubando"
-  },
-  {
-    "puntoCaptura": 8,
-    "numAudio": 0,
-    "especie": "azulejo",
-    "distancia": {
-      "valor": 26,
-      "unidad": "metros"
-    },
-    "individuos": 8,
+    "individuos": 34,
     "actividad": "reposo"
   },
   {
-    "puntoCaptura": 2,
+    "puntoCaptura": 9,
     "numAudio": 0,
     "especie": "torcasa",
+    "distancia": {
+      "valor": 29,
+      "unidad": "metros"
+    },
+    "individuos": 23,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 7,
+    "numAudio": 0,
+    "especie": "canario",
     "distancia": {
       "valor": 18,
       "unidad": "metros"
     },
-    "individuos": 3,
-    "actividad": "incubando"
-  },
-  {
-    "puntoCaptura": 6,
-    "numAudio": 0,
-    "especie": "azulejo",
-    "distancia": {
-      "valor": 8,
-      "unidad": "metros"
-    },
-    "individuos": 8,
-    "actividad": "reposo"
-  },
-  {
-    "puntoCaptura": 2,
-    "numAudio": 0,
-    "especie": "canario",
-    "distancia": {
-      "valor": 21,
-      "unidad": "metros"
-    },
-    "individuos": 3,
-    "actividad": "reposo"
-  },
-  {
-    "puntoCaptura": 10,
-    "numAudio": 0,
-    "especie": "torcasa",
-    "distancia": {
-      "valor": 10,
-      "unidad": "metros"
-    },
-    "individuos": 9,
-    "actividad": "incubando"
-  },
-  {
-    "puntoCaptura": 6,
-    "numAudio": 0,
-    "especie": "torcasa",
-    "distancia": {
-      "valor": 4,
-      "unidad": "metros"
-    },
-    "individuos": 11,
-    "actividad": "incubando"
-  },
-  {
-    "puntoCaptura": 8,
-    "numAudio": 0,
-    "especie": "torcasa",
-    "distancia": {
-      "valor": 11,
-      "unidad": "metros"
-    },
-    "individuos": 11,
+    "individuos": 35,
     "actividad": "volando"
-  },
-  {
-    "puntoCaptura": 10,
-    "numAudio": 0,
-    "especie": "azulejo",
-    "distancia": {
-      "valor": 10,
-      "unidad": "metros"
-    },
-    "individuos": 4,
-    "actividad": "volando"
-  },
-  {
-    "puntoCaptura": 3,
-    "numAudio": 0,
-    "especie": "carpintero",
-    "distancia": {
-      "valor": 9,
-      "unidad": "metros"
-    },
-    "individuos": 4,
-    "actividad": "incubando"
-  },
-  {
-    "puntoCaptura": 6,
-    "numAudio": 0,
-    "especie": "canario",
-    "distancia": {
-      "valor": 20,
-      "unidad": "metros"
-    },
-    "individuos": 14,
-    "actividad": "reposo"
-  },
-  {
-    "puntoCaptura": 6,
-    "numAudio": 0,
-    "especie": "carpintero",
-    "distancia": {
-      "valor": 9,
-      "unidad": "metros"
-    },
-    "individuos": 3,
-    "actividad": "volando"
-  },
-  {
-    "puntoCaptura": 6,
-    "numAudio": 0,
-    "especie": "carpintero",
-    "distancia": {
-      "valor": 8,
-      "unidad": "metros"
-    },
-    "individuos": 3,
-    "actividad": "incubando"
-  },
-  {
-    "puntoCaptura": 5,
-    "numAudio": 0,
-    "especie": "canario",
-    "distancia": {
-      "valor": 15,
-      "unidad": "metros"
-    },
-    "individuos": 9,
-    "actividad": "reposo"
-  },
-  {
-    "puntoCaptura": 7,
-    "numAudio": 0,
-    "especie": "carpintero",
-    "distancia": {
-      "valor": 23,
-      "unidad": "metros"
-    },
-    "individuos": 11,
-    "actividad": "reposo"
-  },
-  {
-    "puntoCaptura": 5,
-    "numAudio": 0,
-    "especie": "canario",
-    "distancia": {
-      "valor": 4,
-      "unidad": "metros"
-    },
-    "individuos": 11,
-    "actividad": "volando"
-  },
-  {
-    "puntoCaptura": 5,
-    "numAudio": 0,
-    "especie": "azulejo",
-    "distancia": {
-      "valor": 21,
-      "unidad": "metros"
-    },
-    "individuos": 3,
-    "actividad": "incubando"
-  },
-  {
-    "puntoCaptura": 8,
-    "numAudio": 0,
-    "especie": "azulejo",
-    "distancia": {
-      "valor": 20,
-      "unidad": "metros"
-    },
-    "individuos": 10,
-    "actividad": "volando"
-  },
-  {
-    "puntoCaptura": 9,
-    "numAudio": 0,
-    "especie": "canario",
-    "distancia": {
-      "valor": 7,
-      "unidad": "metros"
-    },
-    "individuos": 5,
-    "actividad": "incubando"
-  },
-  {
-    "puntoCaptura": 5,
-    "numAudio": 0,
-    "especie": "torcasa",
-    "distancia": {
-      "valor": 10,
-      "unidad": "metros"
-    },
-    "individuos": 10,
-    "actividad": "reposo"
-  },
-  {
-    "puntoCaptura": 7,
-    "numAudio": 0,
-    "especie": "canario",
-    "distancia": {
-      "valor": 8,
-      "unidad": "metros"
-    },
-    "individuos": 3,
-    "actividad": "volando"
-  },
-  {
-    "puntoCaptura": 6,
-    "numAudio": 0,
-    "especie": "canario",
-    "distancia": {
-      "valor": 22,
-      "unidad": "metros"
-    },
-    "individuos": 5,
-    "actividad": "incubando"
-  },
-  {
-    "puntoCaptura": 8,
-    "numAudio": 0,
-    "especie": "carpintero",
-    "distancia": {
-      "valor": 22,
-      "unidad": "metros"
-    },
-    "individuos": 13,
-    "actividad": "incubando"
-  },
-  {
-    "puntoCaptura": 4,
-    "numAudio": 0,
-    "especie": "carpintero",
-    "distancia": {
-      "valor": 27,
-      "unidad": "metros"
-    },
-    "individuos": 10,
-    "actividad": "volando"
-  },
-  {
-    "puntoCaptura": 10,
-    "numAudio": 0,
-    "especie": "carpintero",
-    "distancia": {
-      "valor": 7,
-      "unidad": "metros"
-    },
-    "individuos": 3,
-    "actividad": "volando"
-  },
-  {
-    "puntoCaptura": 9,
-    "numAudio": 0,
-    "especie": "canario",
-    "distancia": {
-      "valor": 5,
-      "unidad": "metros"
-    },
-    "individuos": 14,
-    "actividad": "volando"
-  },
-  {
-    "puntoCaptura": 6,
-    "numAudio": 0,
-    "especie": "torcasa",
-    "distancia": {
-      "valor": 11,
-      "unidad": "metros"
-    },
-    "individuos": 4,
-    "actividad": "reposo"
-  },
-  {
-    "puntoCaptura": 4,
-    "numAudio": 0,
-    "especie": "azulejo",
-    "distancia": {
-      "valor": 16,
-      "unidad": "metros"
-    },
-    "individuos": 5,
-    "actividad": "incubando"
   },
   {
     "puntoCaptura": 4,
     "numAudio": 0,
     "especie": "perico",
     "distancia": {
-      "valor": 2,
+      "valor": 28,
       "unidad": "metros"
     },
-    "individuos": 10,
+    "individuos": 28,
     "actividad": "volando"
   },
   {
-    "puntoCaptura": 2,
+    "puntoCaptura": 9,
     "numAudio": 0,
-    "especie": "torcasa",
+    "especie": "perico",
     "distancia": {
-      "valor": 3,
+      "valor": 21,
       "unidad": "metros"
     },
-    "individuos": 13,
-    "actividad": "incubando"
-  },
-  {
-    "puntoCaptura": 6,
-    "numAudio": 0,
-    "especie": "azulejo",
-    "distancia": {
-      "valor": 12,
-      "unidad": "metros"
-    },
-    "individuos": 12,
+    "individuos": 23,
     "actividad": "incubando"
   },
   {
     "puntoCaptura": 8,
     "numAudio": 0,
-    "especie": "canario",
+    "especie": "azulejo",
     "distancia": {
-      "valor": 19,
+      "valor": 7,
       "unidad": "metros"
     },
-    "individuos": 4,
-    "actividad": "incubando"
+    "individuos": 19,
+    "actividad": "reposo"
   },
   {
-    "puntoCaptura": 7,
-    "numAudio": 0,
-    "especie": "torcasa",
-    "distancia": {
-      "valor": 22,
-      "unidad": "metros"
-    },
-    "individuos": 9,
-    "actividad": "incubando"
-  },
-  {
-    "puntoCaptura": 3,
+    "puntoCaptura": 2,
     "numAudio": 0,
     "especie": "carpintero",
     "distancia": {
       "valor": 2,
       "unidad": "metros"
     },
+    "individuos": 12,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 5,
+    "numAudio": 0,
+    "especie": "canario",
+    "distancia": {
+      "valor": 22,
+      "unidad": "metros"
+    },
+    "individuos": 15,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 8,
+    "numAudio": 0,
+    "especie": "torcasa",
+    "distancia": {
+      "valor": 20,
+      "unidad": "metros"
+    },
     "individuos": 10,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 10,
+    "numAudio": 0,
+    "especie": "canario",
+    "distancia": {
+      "valor": 17,
+      "unidad": "metros"
+    },
+    "individuos": 32,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 4,
+    "numAudio": 0,
+    "especie": "carpintero",
+    "distancia": {
+      "valor": 13,
+      "unidad": "metros"
+    },
+    "individuos": 5,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 5,
+    "numAudio": 0,
+    "especie": "perico",
+    "distancia": {
+      "valor": 10,
+      "unidad": "metros"
+    },
+    "individuos": 10,
+    "actividad": "volando"
+  },
+  {
+    "puntoCaptura": 3,
+    "numAudio": 0,
+    "especie": "perico",
+    "distancia": {
+      "valor": 15,
+      "unidad": "metros"
+    },
+    "individuos": 32,
     "actividad": "reposo"
   },
   {
     "puntoCaptura": 6,
     "numAudio": 0,
-    "especie": "canario",
+    "especie": "azulejo",
     "distancia": {
-      "valor": 15,
+      "valor": 25,
       "unidad": "metros"
     },
-    "individuos": 4,
+    "individuos": 23,
     "actividad": "reposo"
   },
   {
-    "puntoCaptura": 7,
+    "puntoCaptura": 2,
     "numAudio": 0,
-    "especie": "azulejo",
+    "especie": "canario",
     "distancia": {
-      "valor": 18,
+      "valor": 22,
+      "unidad": "metros"
+    },
+    "individuos": 22,
+    "actividad": "incubando"
+  },
+  {
+    "puntoCaptura": 2,
+    "numAudio": 0,
+    "especie": "perico",
+    "distancia": {
+      "valor": 6,
       "unidad": "metros"
     },
     "individuos": 14,
     "actividad": "reposo"
   },
   {
-    "puntoCaptura": 9,
+    "puntoCaptura": 8,
     "numAudio": 0,
-    "especie": "azulejo",
+    "especie": "torcasa",
     "distancia": {
-      "valor": 11,
+      "valor": 28,
       "unidad": "metros"
     },
-    "individuos": 3,
-    "actividad": "incubando"
+    "individuos": 18,
+    "actividad": "reposo"
   }
 ]

@@ -11,6 +11,7 @@
 }
 
 .app .sideBar {
+  position: fixed;
   z-index: 9;
   width: 20%;
   height: 100vh;
@@ -97,6 +98,7 @@
 
 .app .content {
   width: 80%;
+  margin-left: 380px;
   background: #FAFAFA;
 }
 

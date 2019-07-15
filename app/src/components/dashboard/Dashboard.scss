@@ -1,3 +1,13 @@
 .Dash{
-    margin: auto;
+    width: 80%;
+    display: flex;
+    .dash2{
+        width: 100%;
+        .cards{
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        }
+    }
 }
