@@ -50,16 +50,16 @@ class SplineChart extends Component {
 			for (var i = 0; i < data.length; i++) {
 				
 				var elem = data[i];
-				if(elem.puntoCaptura === 1) puntos[0] = puntos[0] + elem.individuos;
-				if(elem.puntoCaptura === 2) puntos[1] = puntos[1] + elem.individuos;
-				if(elem.puntoCaptura === 3) puntos[2] = puntos[2] + elem.individuos;
-				if(elem.puntoCaptura === 4) puntos[3] = puntos[3] + elem.individuos;
-				if(elem.puntoCaptura === 5) puntos[4] = puntos[4] + elem.individuos;
-				if(elem.puntoCaptura === 6) puntos[5] = puntos[5] + elem.individuos;
-				if(elem.puntoCaptura === 7) puntos[6] = puntos[6] + elem.individuos;
-				if(elem.puntoCaptura === 8) puntos[7] = puntos[7] + elem.individuos;
-				if(elem.puntoCaptura === 9) puntos[8] = puntos[8] + elem.individuos;
-				if(elem.puntoCaptura === 10) puntos[9] = puntos[9] + elem.individuos;
+				if(elem.puntoCaptura === 1) puntos[0] += elem.individuos;
+				if(elem.puntoCaptura === 2) puntos[1] += + elem.individuos;
+				if(elem.puntoCaptura === 3) puntos[2] += + elem.individuos;
+				if(elem.puntoCaptura === 4) puntos[3] += + elem.individuos;
+				if(elem.puntoCaptura === 5) puntos[4] += + elem.individuos;
+				if(elem.puntoCaptura === 6) puntos[5] += + elem.individuos;
+				if(elem.puntoCaptura === 7) puntos[6] += + elem.individuos;
+				if(elem.puntoCaptura === 8) puntos[7] += + elem.individuos;
+				if(elem.puntoCaptura === 9) puntos[8] += + elem.individuos;
+				if(elem.puntoCaptura === 10) puntos[9] += + elem.individuos;
 				
 			}
 

@@ -4,7 +4,7 @@
     "numAudio": "1",
     "especie": "azulejo",
     "distancia": {
-      "valor": null,
+      "valor": 10,
       "unidad": "metros"
     },
     "individuos": 8,
@@ -37,7 +37,7 @@
     "numAudio": "4",
     "especie": "azulejo",
     "distancia": {
-      "valor": null,
+      "valor": 15,
       "unidad": "metros"
     },
     "individuos": 8,
@@ -48,7 +48,7 @@
     "numAudio": "5",
     "especie": "azulejo",
     "distancia": {
-      "valor": null,
+      "valor": 15,
       "unidad": "metros"
     },
     "individuos": 8,

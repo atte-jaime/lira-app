@@ -4,10 +4,10 @@ import SingleData from '../singleData/SingleData';
 import '../dashboard/Dashboard.css';
 
 class Dashboard extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
-            dataLoaded: false,
+            dataLoaded: true,
             totalAves: {
                 title: "Aves en total",
                 value: 0
@@ -36,32 +36,18 @@ class Dashboard extends Component {
     }
 
     dash() {        
-        
-        var totalEspecies = [];
-        var promAvesPunto = 0;
-        var tempAves = 0;
-        
-        fetch('http://localhost:8000/public/data/valores-raw.json')
-		.then(function(response) {
-            return response.json();
-		})
-		.then(function(data) {
-            let totalAves = 0;
-            data.forEach(element => {
-                totalAves = totalAves + element.individuos;
-            });
-            tempAves = totalAves;
-        });
 
 
         return(
             <div className= "dash2">
                 <Spline/>
-                <div className="cards">
-                    <SingleData value= {386} image="" title= {this.state.totalAves.title}/>
-                    <SingleData value= {15} image="" title= {this.state.totalEspecies.title}/>
-                    <SingleData value= {63} image="" title= {this.state.promAvesPunto.title}/>
-                </div>
+                    {this.state.totalAves.value !== 0? 
+                        <div className="cards">
+                            <SingleData value= {this.state.totalAves.value} image="" title= {this.state.totalAves.title}/>
+                            <SingleData value= {this.state.totalEspecies.value} image="" title= {this.state.totalEspecies.title}/>
+                            <SingleData value= {this.state.promAvesPunto.value} image="" title= {this.state.promAvesPunto.title}/>
+                        </div>
+                    : null}
             </div>
         );
     }
@@ -80,6 +66,41 @@ class Dashboard extends Component {
     componentDidMount(){
         this.timerAnalisis();
    }
+
+   componentWillMount(){
+    fetch('http://localhost:8000/public/data/valores-raw.json')
+    .then((response)=> {
+        return response.json();
+    })
+    .then((data)=> {
+        let tempAves = 0;
+
+        // CALCULO DE AVES TOTALES
+
+        data.forEach(element => {
+            tempAves = tempAves + element.individuos;        
+        });
+
+
+        this.setState({
+            totalAves: {
+                title: "Aves en total",
+                value: tempAves
+            },
+            totalEspecies: {
+                title: "Especies encontradas",
+                value: 4
+            },
+            promAvesPunto: {
+                title: "Aves por punto",
+                value: parseInt(tempAves/10)
+            }
+        });
+        
+        console.log(this.state.totalAves.value);
+    });
+   }
+
 }
 
 export default Dashboard;
