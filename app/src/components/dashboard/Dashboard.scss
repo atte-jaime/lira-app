@@ -1,13 +1,45 @@
-.Dash{
-    width: 80%;
+.Dash {
+    width: 100%;
     display: flex;
-    .dash2{
+
+    .dashContain {
         width: 100%;
-        .cards{
+
+        .dash1 {
+            margin-top: 2rem;
+
+            .spline {
+                background: white;
+                padding: 2rem 0;
+                box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+                border-radius: 15px;
+            }
+
+            .cards {
+                width: 100%;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: flex-start;
+            }
+        }
+
+        .dash2 {
             width: 100%;
             display: flex;
             flex-flow: row wrap;
-            justify-content: flex-start;
+            align-content: space-around;
+
+            .pie {
+                margin-right: 3rem;
+                width: 500px;
+                .innerPie{
+                    background-color: white;
+                    padding: 1rem;
+                    box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+                    border-radius: 15px;
+                    
+                }
+            }
         }
     }
 }

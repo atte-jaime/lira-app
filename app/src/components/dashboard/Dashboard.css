@@ -1,15 +1,27 @@
 .Dash {
-  width: 80%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.Dash .dash2 {
+.Dash .dashContain {
   width: 100%;
 }
 
-.Dash .dash2 .cards {
+.Dash .dashContain .dash1 {
+  margin-top: 2rem;
+}
+
+.Dash .dashContain .dash1 .spline {
+  background: white;
+  padding: 2rem 0;
+  -webkit-box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+          box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+}
+
+.Dash .dashContain .dash1 .cards {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,5 +33,31 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+
+.Dash .dashContain .dash2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+.Dash .dashContain .dash2 .pie {
+  margin-right: 3rem;
+  width: 500px;
+}
+
+.Dash .dashContain .dash2 .pie .innerPie {
+  background-color: white;
+  padding: 1rem;
+  -webkit-box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+          box-shadow: 4px 0px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
 }
 /*# sourceMappingURL=Dashboard.css.map */

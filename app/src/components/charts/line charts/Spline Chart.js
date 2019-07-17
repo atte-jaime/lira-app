@@ -12,13 +12,15 @@ class SplineChart extends Component {
 			},
 			axisX: {
 				title: "Puntos de Captura",
-				lineColor: "white",
+				lineColor: "#ffffff",
 				minimum: 0,
 				maximum: 11
 			},
 			axisY: {
 				title: "Número de individuos",
-				includeZero: false
+				includeZero: false,
+				lineColor: "#ffffff",
+				gridColor: "#ffffff"
 			},
 			data: [{
 				type: "spline",
