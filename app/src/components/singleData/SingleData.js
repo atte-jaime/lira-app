@@ -6,7 +6,7 @@ class SingleData extends Component{
         super(props);
         this.state={
             value: this.props.value,
-            image: this.props.image,
+            imagen: this.props.imagen,
             title: this.props.title,
         };
     }
@@ -16,7 +16,7 @@ class SingleData extends Component{
         return(
             <div className="singleData">
                 <div className="single">
-                    <img src={this.state.image} alt="Icon"/>
+                    <img src={this.state.imagen} width="84px" height="84px" alt="Icon"/>
                     <h1>{this.state.value}</h1>
                 </div>
                 <p>{this.state.title}</p>

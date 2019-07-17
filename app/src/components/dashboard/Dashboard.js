@@ -4,6 +4,14 @@ import SingleData from '../singleData/SingleData';
 import PieChart from '../charts/pie charts/PieChart';
 import '../dashboard/Dashboard.css';
 
+// IMAGENES
+import nest from '../../img/nest.png';
+import bird from '../../img/bird.png';
+import rest from '../../img/rest.png';
+import flying from '../../img/flying.png';
+import pinpoint from '../../img/pin.png';
+import atomic from '../../img/atomic.png';
+
 class Dashboard extends Component {
     constructor(props) {
         super(props);
@@ -82,9 +90,9 @@ class Dashboard extends Component {
                     </div>
                     {this.state.totalAves.value !== 0 ?
                         <div className="cards">
-                            <SingleData value={this.state.totalAves.value} image="" title={this.state.totalAves.title} />
-                            <SingleData value={this.state.totalEspecies.value} image="" title={this.state.totalEspecies.title} />
-                            <SingleData value={this.state.promAvesPunto.value} image="" title={this.state.promAvesPunto.title} />
+                            <SingleData value={this.state.totalAves.value} imagen={bird} title={this.state.totalAves.title} />
+                            <SingleData value={this.state.totalEspecies.value} imagen={atomic} title={this.state.totalEspecies.title} />
+                            <SingleData value={this.state.promAvesPunto.value} imagen={pinpoint} title={this.state.promAvesPunto.title} />
                         </div>
                         : null}
                 </div>
