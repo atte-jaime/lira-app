@@ -22,6 +22,7 @@
 }
 
 .Dash .dashContain .dash1 .cards {
+  margin-top: 2rem;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,6 +34,9 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .Dash .dashContain .dash2 {

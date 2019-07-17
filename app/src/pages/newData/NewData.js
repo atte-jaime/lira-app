@@ -8,7 +8,8 @@ class NewData extends Component {
   constructor(props){
     super(props);
     this.state = {
-      isDataReady: true,
+      isDataReady: false,
+      showComp: false
     }
   }
 
@@ -23,7 +24,7 @@ class NewData extends Component {
         
         {!this.state.isDataReady?
         <div className="dashboard"> <Upload /> <div onClick={this.transcriptData}><Analize/></div></div>
-        : <Dashboard />
+        : this.state.showComp? <Dashboard /> : <h1>Analizando datos</h1>
         }
       </div>
     );    
@@ -34,6 +35,16 @@ class NewData extends Component {
     this.setState({isDataReady: true});
   }
   
+  componentDidMount(){
+    if (!this.state.showComp) {
+      setTimeout(()=>{
+          console.log("cambio de estado a loaded");
+          this.setState({showComp:true});
+          
+      }, 60000);
+    }
+  }
+
 }
  
 export default NewData; 

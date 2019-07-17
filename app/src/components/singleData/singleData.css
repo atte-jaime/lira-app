@@ -1,9 +1,10 @@
 .singleData {
-  margin-top: 5rem;
+  margin-top: 1rem;
   margin-bottom: 5rem;
   margin-right: 3rem;
   background-color: white;
   width: 200px;
+  height: 180px;
   padding: 1rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
