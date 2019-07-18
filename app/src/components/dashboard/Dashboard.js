@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Spline from '../charts/line charts/Spline Chart';
 import SingleData from '../singleData/SingleData';
 import PieChart from '../charts/pie charts/PieChart';
+import ListaAves from '../listaAves/ListaAves'
 import '../dashboard/Dashboard.css';
 
 // IMAGENES
@@ -43,20 +44,20 @@ class Dashboard extends Component {
         );
     }
 
-    dash() {        
+    dash() {
 
         if (this.state.data !== undefined) {
             var tempData = this.state.data;
-            var tempEspecies= tempData.map(x => x.especie);
+            var tempEspecies = tempData.map(x => x.especie);
             var pieValues = [];
             var porPunto = [];
 
-            Array.prototype.unique = function() {
+            Array.prototype.unique = function () {
                 return this.filter(function (value, index, self) {
-                  return self.indexOf(value) === index;
+                    return self.indexOf(value) === index;
                 });
             };
-            
+
             tempEspecies = tempEspecies.unique();
 
 
@@ -79,50 +80,50 @@ class Dashboard extends Component {
 
 
             for (let i = 0; i < 10; i++) {
-                let especies= [];
+                let especies = [];
 
                 tempEspecies.forEach(esp => {
                     especies.push({
-                        name : esp,
-                        value : 0
-                    });    
+                        name: esp,
+                        value: 0
+                    });
                 });
 
                 porPunto.push({
-                    puntoCaptura: i+1,
+                    puntoCaptura: i + 1,
                     especies
-                });            
+                });
             }
 
             for (let i = 0; i < porPunto[0].especies.length; i++) {
                 const tempEsp = porPunto[0].especies[i];
-                
+
                 for (let j = 0; j < tempData.length; j++) {
                     const dato = tempData[j];
-                    
-                    if(tempEsp.name === dato.especie){
-                        porPunto[dato.puntoCaptura-1].especies[i].value += dato.individuos;
+
+                    if (tempEsp.name === dato.especie) {
+                        porPunto[dato.puntoCaptura - 1].especies[i].value += dato.individuos;
                     }
                 }
             }
 
             for (let i = 0; i < porPunto.length; i++) {
-                porPunto[i].especies.sort(function(a, b){
-                    if(a.value > b.value){
+                porPunto[i].especies.sort(function (a, b) {
+                    if (a.value > b.value) {
                         return -1;
                     }
-                    if(a.value < b.value){
+                    if (a.value < b.value) {
                         return 1;
                     }
                 });
-                
+
             }
 
             console.log(porPunto);
-            
+
         }
 
-        return(
+        return (
 
             <div className="dashContain">
                 <h1>Título investigación</h1>
@@ -138,36 +139,44 @@ class Dashboard extends Component {
                             </div>
                             <SingleData value={this.state.totalEspecies.value} imagen={atomic} title={this.state.totalEspecies.title} />
                             <div>
-                            <h3>Promedios</h3>
-                            <SingleData value={this.state.promAvesPunto.value} imagen={pinpoint} title={this.state.promAvesPunto.title} />
+                                <h3>Promedios</h3>
+                                <SingleData value={this.state.promAvesPunto.value} imagen={pinpoint} title={this.state.promAvesPunto.title} />
                             </div>
                             <div>
-                            <h3>Estados</h3>
-                            <SingleData value={this.state.volando} imagen={flying} title="En vuelo" />
+                                <h3>Estados</h3>
+                                <SingleData value={this.state.volando} imagen={flying} title="En vuelo" />
                             </div>
                             <SingleData value={this.state.rest} imagen={rest} title="En reposo" />
                             <SingleData value={this.state.nido} imagen={nest} title="Incubando" />
-                            
+
                         </div>
                         : null}
                 </div>
 
                 <h1>Título X</h1>
-                
+
                 {pieValues !== undefined ?
-                <div className="dash2">
-                    <div className="pie">
-                        <h3>Individuos por especie</h3>
-                        <div className="innerPie">
-                            <PieChart total={this.state.totalAves.value + " aves en total"} dataPoints={pieValues}/>
+                    <div className="dash2">
+                        <div className="pie">
+                            <h3>Individuos por especie</h3>
+                            <div className="innerPie">
+                                <PieChart total={this.state.totalAves.value + " aves en total"} dataPoints={pieValues} />
+                            </div>
                         </div>
                     </div>
-                </div>  
-                : null}
-
+                    : null}
+                
+                {porPunto !== undefined ?
+                
                 <div className="dash3">
-                    
+                    {
+                        porPunto.map(x=>{
+                            return <ListaAves punto = {x.puntoCaptura} esp = {x.especies}/>     
+                        })
+                    }
                 </div>
+                    : null}
+                
             </div>
         );
     }
