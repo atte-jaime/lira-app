@@ -8,8 +8,8 @@ class NewData extends Component {
   constructor(props){
     super(props);
     this.state = {
-      isDataReady: false,
-      showComp: false
+      isDataReady: true,
+      showComp: true
     }
   }
 

@@ -49,6 +49,7 @@ class Dashboard extends Component {
             var tempData = this.state.data;
             var tempEspecies= tempData.map(x => x.especie);
             var pieValues = [];
+            var porPunto = [];
 
             Array.prototype.unique = function() {
                 return this.filter(function (value, index, self) {
@@ -76,7 +77,48 @@ class Dashboard extends Component {
                 }
             }
 
-            console.log(pieValues);
+
+            for (let i = 0; i < 10; i++) {
+                let especies= [];
+
+                tempEspecies.forEach(esp => {
+                    especies.push({
+                        name : esp,
+                        value : 0
+                    });    
+                });
+
+                porPunto.push({
+                    puntoCaptura: i+1,
+                    especies
+                });            
+            }
+
+            for (let i = 0; i < porPunto[0].especies.length; i++) {
+                const tempEsp = porPunto[0].especies[i];
+                
+                for (let j = 0; j < tempData.length; j++) {
+                    const dato = tempData[j];
+                    
+                    if(tempEsp.name === dato.especie){
+                        porPunto[dato.puntoCaptura-1].especies[i].value += dato.individuos;
+                    }
+                }
+            }
+
+            for (let i = 0; i < porPunto.length; i++) {
+                porPunto[i].especies.sort(function(a, b){
+                    if(a.value > b.value){
+                        return -1;
+                    }
+                    if(a.value < b.value){
+                        return 1;
+                    }
+                });
+                
+            }
+
+            console.log(porPunto);
             
         }
 
@@ -99,6 +141,13 @@ class Dashboard extends Component {
                             <h3>Promedios</h3>
                             <SingleData value={this.state.promAvesPunto.value} imagen={pinpoint} title={this.state.promAvesPunto.title} />
                             </div>
+                            <div>
+                            <h3>Estados</h3>
+                            <SingleData value={this.state.volando} imagen={flying} title="En vuelo" />
+                            </div>
+                            <SingleData value={this.state.rest} imagen={rest} title="En reposo" />
+                            <SingleData value={this.state.nido} imagen={nest} title="Incubando" />
+                            
                         </div>
                         : null}
                 </div>
@@ -113,25 +162,15 @@ class Dashboard extends Component {
                             <PieChart total={this.state.totalAves.value + " aves en total"} dataPoints={pieValues}/>
                         </div>
                     </div>
-                    <div className="pie">
-                        <h3>Distancia promedio</h3>
-                        <div className="innerPie">
-                            <PieChart />
-
-                        </div>
-                    </div>
                 </div>  
                 : null}
 
                 <div className="dash3">
-
+                    
                 </div>
             </div>
         );
     }
-
-
-
 
     componentDidMount() {
         fetch('http://localhost:8000/public/data/valores-raw.json')
@@ -140,6 +179,10 @@ class Dashboard extends Component {
             })
             .then((data) => {
                 let tempAves = 0;
+                let tempVolando = 0;
+                let tempNido  = 0;
+                let tempRest = 0;
+                
                 var tempEspecies= data.map(x => x.especie);
 
     
@@ -155,6 +198,18 @@ class Dashboard extends Component {
 
                 data.forEach(element => {
                     tempAves = tempAves + element.individuos;
+                    
+                    if (element.actividad === "volando") { 
+                        tempVolando += element.individuos;
+                    }
+
+                    if (element.actividad === "reposo") { 
+                        tempRest += element.individuos;
+                    }
+
+                    if (element.actividad === "incubando") { 
+                        tempNido += element.individuos;
+                    }
                 });
 
 
@@ -171,6 +226,9 @@ class Dashboard extends Component {
                         title: "Aves por punto",
                         value: parseInt(tempAves / 10)
                     },
+                    volando : tempVolando,
+                    rest: tempRest,
+                    nido: tempNido,
                     data: data
                 });
             });
